@@ -1,10 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-int conta_consonanti(int vocali, int lunghezza)
-{
-    dasda
-}
 int conta_vocali(char parola[])
 {
     int vocali_parola=0;
