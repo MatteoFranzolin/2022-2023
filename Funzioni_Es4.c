@@ -6,7 +6,7 @@ int conta_vocali(char parola[])
     int vocali_parola=0;
     for (int i = 0; i < strlen(parola); i++)
     {
-        if (parola[i] == 'a' || parola[i] == 'a' || parola[i] == 'e' || parola[i] == 'i' || parola[i] == 'o' || parola[i] == 'u')
+        if (parola[i] == 'a' || parola[i] == 'e' || parola[i] == 'i' || parola[i] == 'o' || parola[i] == 'u')
             vocali_parola++;
     }
     return vocali_parola;
