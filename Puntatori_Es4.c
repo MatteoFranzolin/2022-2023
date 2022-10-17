@@ -195,5 +195,4 @@ int main(int argc, char *argv[])
             break;
         }
     } while (selezione != 0);
-    visualizza(numeri, num);
 }
