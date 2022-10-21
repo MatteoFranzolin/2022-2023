@@ -15,4 +15,5 @@ int main(int argc, char *argv[])
         printf("%d e %d\n", i, k);
         k++;
     }
+    return 0;
 }
