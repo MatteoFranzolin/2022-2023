@@ -63,8 +63,8 @@ int main(int argc, char *argv[])
             printf("\nData di nascita: 0%d/%d/%d\n", giorno, mese, anno);
         else if (mese < 10)
             printf("\nData di nascita: %d/0%d/%d\n", giorno, mese, anno);
-        elseprintf("\nData di nascita: %d/%d/%d\n", giorno, mese, anno);
-        printf("\nData di nascita: %d/%d/%d\n", giorno, mese, anno);
+        else
+            printf("\nData di nascita: %d/%d/%d\n", giorno, mese, anno);
     }
     return 0;
 }
