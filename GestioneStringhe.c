@@ -29,8 +29,9 @@ int conta_frequenza(char stringa[], char carattere)
 void crea_stringhe(char stringa[], char stringa_pari[], char stringa_dispari[])
 {
     int k = 0, t = 0;
-    for (int i = 0; i < strlen(stringa) - 1; i++)
+    for (int i = 0; i < strlen(stringa); i++)
     {
+
         if (i % 2 == 0)
         {
             stringa_pari[k] = stringa[i];
@@ -63,16 +64,32 @@ int confronto_lunghezza(char stringa1[], char stringa2[])
         return 2;
     return -1;
 }
+int carattere_gia_presente(char array[], char carattere)
+{
+    for (int i = 0; i < strlen(array); i++)
+    {
+        if (array[i] == carattere)
+            return 1;
+    }
+    return 0;
+}
 void lettere_comuni(char stringa1[], char stringa2[], char comune[])
 {
     int contatore = 0;
     int inserisci = 1;
+    char carattere;
     for (int i = 0; i < strlen(stringa1); i++)
     {
+        carattere=stringa1[i];
         for (int k = 0; k < strlen(stringa2); k++)
         {
-            if (stringa1[i] == stringa2[k])
-                comune[contatore++] = stringa1[i];
+            if (carattere == stringa2[k])
+            {
+                if (carattere_gia_presente(comune, carattere) == 0)
+                {
+                    comune[contatore++] = carattere;
+                }
+            }
         }
     }
 }
@@ -149,7 +166,7 @@ int main(int argc, char *argv[])
             printf("Crea due stringhe\n");
             crea_stringhe(stringa, stringa_pari, stringa_dispari);
             printf("\nStringa pari: %s", stringa_pari);
-            printf("\nStringa dispari: %s", stringa_dispari);
+            printf("\nStringa dispari: %s\n", stringa_dispari);
             break;
         case 4:
             printf("Verifica le doppie");
