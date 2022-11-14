@@ -5,7 +5,7 @@
 int main()
 {
     FILE *f1;
-    char P[MAX], S[MAX];
+    char S[MAX];
     int contatore = 0;
     f1 = fopen("F1.txt", "r");
     if (f1 == NULL)
